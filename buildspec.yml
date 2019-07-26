@@ -36,7 +36,5 @@ artifacts:
     BuildArtifact:
       files:
         - imagedefinitions.json
-    DefinitionArtifact:
-      files:
         - appspec.yml
         - taskdef.json
