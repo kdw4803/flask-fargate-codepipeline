@@ -9,7 +9,7 @@
         }],
         "image": "151676761426.dkr.ecr.ap-northeast-1.amazonaws.com/flask_docker:latest",
         "essential": true,
-        "name": "nginx",
+        "name": "flask-docker-fargate",
         "logConfiguration": {
             "logDriver": "awslogs",
             "options": {
