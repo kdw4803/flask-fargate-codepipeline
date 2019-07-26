@@ -16,7 +16,7 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...
-      - docker-compose build
+      - docker build -t flask_docker:latest .
       - docker tag flask_docker:latest $REPOSITORY_URI:$IMAGE_TAG
       - docker tag flask_docker:latest $REPOSITORY_URI:latest
   post_build:
