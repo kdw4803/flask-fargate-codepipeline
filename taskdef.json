@@ -1,0 +1,30 @@
+{
+    "ipcMode": null,
+    "executionRoleArn": "arn:aws:iam::151676761426:role/ecsTaskExecutionRole",
+    "containerDefinitions": [{
+        "portMappings": [{
+            "hostPort": 80,
+            "protocol": "tcp",
+            "containerPort": 80
+        }],
+        "image": "151676761426.dkr.ecr.ap-northeast-1.amazonaws.com/flask_docker:latest",
+        "essential": true,
+        "name": "nginx",
+        "logConfiguration": {
+            "logDriver": "awslogs",
+            "options": {
+                "awslogs-group": "/ecs/flask-docker",
+                "awslogs-region": "ap-northeast-1",
+                "awslogs-stream-prefix": "ecs"
+            }
+        }
+    }],
+    "memory": "1024",
+    "taskRoleArn": "arn:aws:iam::151676761426:role/ecsTaskExecutionRole",
+    "family": "flask-docker-fargate",
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "networkMode": "awsvpc",
+    "cpu": "512"
+}
